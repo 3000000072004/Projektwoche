@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_82f694da0284d274ca2271ff04556e29 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_82f694da0284d274ca2271ff04556e29" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_82f694da0284d274ca2271ff04556e29 = L.map(
+                "map_82f694da0284d274ca2271ff04556e29",
+                {
+                    center: [51.451, 6.9674],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4cf56caf324a3d07a49ac992b5ec02f9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4cf56caf324a3d07a49ac992b5ec02f9.addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var marker_1c771174822d9baa1b7deba60bc52db1 = L.marker(
+                [51.45304, 6.9802],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_1a8a5c9ce3a92cc71d80551e254688a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aeece0b63893c48e31dc5794e5596b6a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4778b9a479ec128b88bd09aef3a7c8c9 = $(`<div id="html_4778b9a479ec128b88bd09aef3a7c8c9" style="width: 100.0%; height: 100.0%;">     <b>HNBK Berufskolleg</b><br>     Berufskolleg des HNBK in Frohnhausen<br>     <a href="https://hnbk.de" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_aeece0b63893c48e31dc5794e5596b6a.setContent(html_4778b9a479ec128b88bd09aef3a7c8c9);
+            
+        
+
+        marker_1c771174822d9baa1b7deba60bc52db1.bindPopup(popup_aeece0b63893c48e31dc5794e5596b6a)
+        ;
+
+        
+    
+    
+            marker_1c771174822d9baa1b7deba60bc52db1.bindTooltip(
+                `<div>
+                     HNBK Berufskolleg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c771174822d9baa1b7deba60bc52db1.setIcon(icon_1a8a5c9ce3a92cc71d80551e254688a3);
+            
+    
+            var marker_182c2b0c8b47f4dc5266650683f34296 = L.marker(
+                [51.44670060010371, 6.97690142157827],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_ff194e1d358e033cc4dc716ba91b379c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31471ad6140e3fd2833daf9ee507cdda = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_973c91834dd262dbfe1310aa809bb5b9 = $(`<div id="html_973c91834dd262dbfe1310aa809bb5b9" style="width: 100.0%; height: 100.0%;">     <b>Bioladen Frohnhausen</b><br>          <br>     <a href="https://www.startnext.com/bioladenretterfrohnhausen" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_31471ad6140e3fd2833daf9ee507cdda.setContent(html_973c91834dd262dbfe1310aa809bb5b9);
+            
+        
+
+        marker_182c2b0c8b47f4dc5266650683f34296.bindPopup(popup_31471ad6140e3fd2833daf9ee507cdda)
+        ;
+
+        
+    
+    
+            marker_182c2b0c8b47f4dc5266650683f34296.bindTooltip(
+                `<div>
+                     Bioladen Frohnhausen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_182c2b0c8b47f4dc5266650683f34296.setIcon(icon_ff194e1d358e033cc4dc716ba91b379c);
+            
+    
+            var marker_e14fb8dc1f76407570e35e19019bcc27 = L.marker(
+                [51.45333787157612, 6.984234112924383],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_28293aaf27f8cbaef9d2ce654b7b9ead = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_52f03386c08e27c9614ab48ec1799441 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e7ca28e31bbe2232af55281587c34664 = $(`<div id="html_e7ca28e31bbe2232af55281587c34664" style="width: 100.0%; height: 100.0%;">     <b>Gemeinschaftsgarten „Buntes Grün“ des Mehrgenerationenhauses </b><br>        <br>     <a href="https://mgh-essen.de/" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_52f03386c08e27c9614ab48ec1799441.setContent(html_e7ca28e31bbe2232af55281587c34664);
+            
+        
+
+        marker_e14fb8dc1f76407570e35e19019bcc27.bindPopup(popup_52f03386c08e27c9614ab48ec1799441)
+        ;
+
+        
+    
+    
+            marker_e14fb8dc1f76407570e35e19019bcc27.bindTooltip(
+                `<div>
+                     Gemeinschaftsgarten „Buntes Grün“ des Mehrgenerationenhauses 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e14fb8dc1f76407570e35e19019bcc27.setIcon(icon_28293aaf27f8cbaef9d2ce654b7b9ead);
+            
+    
+            var marker_470580a41d210715bbece761bef517d9 = L.marker(
+                [51.449818596169685, 6.9771801822436865],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_0034a9c7e54bf32263111570c2df0453 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96ce5e06d0979aaa5bc05e2543b34b87 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_43285cd090f2e141c9310699262d8ac2 = $(`<div id="html_43285cd090f2e141c9310699262d8ac2" style="width: 100.0%; height: 100.0%;">     <b>Veganes Restaurant Hummelbude</b><br>         <br>     <a href="https://www.hummelbude.com" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_96ce5e06d0979aaa5bc05e2543b34b87.setContent(html_43285cd090f2e141c9310699262d8ac2);
+            
+        
+
+        marker_470580a41d210715bbece761bef517d9.bindPopup(popup_96ce5e06d0979aaa5bc05e2543b34b87)
+        ;
+
+        
+    
+    
+            marker_470580a41d210715bbece761bef517d9.bindTooltip(
+                `<div>
+                     Veganes Restaurant Hummelbude
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_470580a41d210715bbece761bef517d9.setIcon(icon_0034a9c7e54bf32263111570c2df0453);
+            
+    
+            var marker_898f00e698290eac17fb347dbd0afa01 = L.marker(
+                [51.44695109778423, 6.976376897583824],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_376a8d45d7105bd8e1ebe1a0dd430214 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_63da311b5b5ca5db8749eea17755a667 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_54e7b8dbfdaa94a3670216feb487d54c = $(`<div id="html_54e7b8dbfdaa94a3670216feb487d54c" style="width: 100.0%; height: 100.0%;">     <b>Kaffeerösterei und Café Arcangelo</b><br>         <br>     <a href="http://www.arcangelo-kaffee.de/" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_63da311b5b5ca5db8749eea17755a667.setContent(html_54e7b8dbfdaa94a3670216feb487d54c);
+            
+        
+
+        marker_898f00e698290eac17fb347dbd0afa01.bindPopup(popup_63da311b5b5ca5db8749eea17755a667)
+        ;
+
+        
+    
+    
+            marker_898f00e698290eac17fb347dbd0afa01.bindTooltip(
+                `<div>
+                     Kaffeerösterei und Café Arcangelo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_898f00e698290eac17fb347dbd0afa01.setIcon(icon_376a8d45d7105bd8e1ebe1a0dd430214);
+            
+    
+            var marker_c7f366b40795d100ae13de083fb4beb6 = L.marker(
+                [51.452634002108645, 6.986805912924353],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_22aa547669289c074c158d48c3538844 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a91248d9b86144381d6fc5111292c92 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6c8e1f4e49222ae98cb390d4623cb084 = $(`<div id="html_6c8e1f4e49222ae98cb390d4623cb084" style="width: 100.0%; height: 100.0%;">     <b>Nachbarschaftsgärten Diergardtstraße</b><br>         <br>     <a href="https://transitiontown-essen.de/gruppen/gemeinschaftsgaerten/frohnhausen/" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_5a91248d9b86144381d6fc5111292c92.setContent(html_6c8e1f4e49222ae98cb390d4623cb084);
+            
+        
+
+        marker_c7f366b40795d100ae13de083fb4beb6.bindPopup(popup_5a91248d9b86144381d6fc5111292c92)
+        ;
+
+        
+    
+    
+            marker_c7f366b40795d100ae13de083fb4beb6.bindTooltip(
+                `<div>
+                     Nachbarschaftsgärten Diergardtstraße
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7f366b40795d100ae13de083fb4beb6.setIcon(icon_22aa547669289c074c158d48c3538844);
+            
+    
+            var marker_2b1b7e4830d3167edc9f219da54cd734 = L.marker(
+                [51.44992702692617, 6.976800182243684],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_989ff55160bbaa623142987328fa7406 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad9ae6167c19ac16d4239036c515a195 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0f02218476188daa3d2036edf5fd65ea = $(`<div id="html_0f02218476188daa3d2036edf5fd65ea" style="width: 100.0%; height: 100.0%;">     <b>Diakonieladen Frohnhausen</b><br>         <br>     <a href="https://www.diakoniewerk-essen.de/Arbeitsprojekte/Diakonielaeden/104-Diakonieladen+Frohnhausen" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_ad9ae6167c19ac16d4239036c515a195.setContent(html_0f02218476188daa3d2036edf5fd65ea);
+            
+        
+
+        marker_2b1b7e4830d3167edc9f219da54cd734.bindPopup(popup_ad9ae6167c19ac16d4239036c515a195)
+        ;
+
+        
+    
+    
+            marker_2b1b7e4830d3167edc9f219da54cd734.bindTooltip(
+                `<div>
+                     Diakonieladen Frohnhausen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b1b7e4830d3167edc9f219da54cd734.setIcon(icon_989ff55160bbaa623142987328fa7406);
+            
+    
+            var marker_ecdb4c8e7669aaf941e44c7cf924d687 = L.marker(
+                [51.44967635533788, 6.9766597245734925],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_22f45319a0eaf3f9bbc6ee39ffe41aaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9907ca4ed6474ea0c3df7d394ae9474d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b84c5a4480d099b56aeb59f26a7d6a2e = $(`<div id="html_b84c5a4480d099b56aeb59f26a7d6a2e" style="width: 100.0%; height: 100.0%;">     <b>Kolpingfamilie Frohnhausen</b><br>         <br>     <a href="https://vor-ort.kolping.de/kolpingsfamilie-essen-frohnhausen/" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_9907ca4ed6474ea0c3df7d394ae9474d.setContent(html_b84c5a4480d099b56aeb59f26a7d6a2e);
+            
+        
+
+        marker_ecdb4c8e7669aaf941e44c7cf924d687.bindPopup(popup_9907ca4ed6474ea0c3df7d394ae9474d)
+        ;
+
+        
+    
+    
+            marker_ecdb4c8e7669aaf941e44c7cf924d687.bindTooltip(
+                `<div>
+                     Kolpingfamilie Frohnhausen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ecdb4c8e7669aaf941e44c7cf924d687.setIcon(icon_22f45319a0eaf3f9bbc6ee39ffe41aaf);
+            
+    
+            var marker_0697abf480ee1d1b2901047d6d16fbec = L.marker(
+                [51.44747811889998, 6.978146942106391],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_e1f08c30893d894714698ce66cc776f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ef7290e8c288f17a727559e0822ceaa = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2940d14f20b45af34d62251991a15c54 = $(`<div id="html_2940d14f20b45af34d62251991a15c54" style="width: 100.0%; height: 100.0%;">     <b>Biohof Felchner (Wochenmarkt)</b><br>         <br>     <a href="https://biohof-felchner.de/unser-hofladen" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_8ef7290e8c288f17a727559e0822ceaa.setContent(html_2940d14f20b45af34d62251991a15c54);
+            
+        
+
+        marker_0697abf480ee1d1b2901047d6d16fbec.bindPopup(popup_8ef7290e8c288f17a727559e0822ceaa)
+        ;
+
+        
+    
+    
+            marker_0697abf480ee1d1b2901047d6d16fbec.bindTooltip(
+                `<div>
+                     Biohof Felchner (Wochenmarkt)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0697abf480ee1d1b2901047d6d16fbec.setIcon(icon_e1f08c30893d894714698ce66cc776f1);
+            
+    
+            var marker_a6fcdd42585dd441a7fd3f3283bd03d4 = L.marker(
+                [51.44596442471481, 6.974397499429239],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_f55f56193a04fbc947d6f72640d232dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5016f2ed1b19c7bc0f3cd8e29a0aae24 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d7aa299c186d6a75265332f2331438b7 = $(`<div id="html_d7aa299c186d6a75265332f2331438b7" style="width: 100.0%; height: 100.0%;">     <b>Apostelkirche Essen</b><br>         <br>     <a href="https://ekef.de/gemeinde-frohnhausen-apostelkirche.html" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_5016f2ed1b19c7bc0f3cd8e29a0aae24.setContent(html_d7aa299c186d6a75265332f2331438b7);
+            
+        
+
+        marker_a6fcdd42585dd441a7fd3f3283bd03d4.bindPopup(popup_5016f2ed1b19c7bc0f3cd8e29a0aae24)
+        ;
+
+        
+    
+    
+            marker_a6fcdd42585dd441a7fd3f3283bd03d4.bindTooltip(
+                `<div>
+                     Apostelkirche Essen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a6fcdd42585dd441a7fd3f3283bd03d4.setIcon(icon_f55f56193a04fbc947d6f72640d232dc);
+            
+    
+            var marker_507cc69a60c3e801ae7dfd8e0a4e0dab = L.marker(
+                [51.446104914474176, 6.97462025340841],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_b8e0b57e17d7de5ed58f29da15068929 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89abd09949781d9265b76a8b59cd7eea = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_92edc889ccc18257079db66d50fd5551 = $(`<div id="html_92edc889ccc18257079db66d50fd5551" style="width: 100.0%; height: 100.0%;">     <b>Café Forum der Apostelkirche</b><br>         <br>     <a href="https://ekef.de/angebote-gruppen-frohnhausen.html" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_89abd09949781d9265b76a8b59cd7eea.setContent(html_92edc889ccc18257079db66d50fd5551);
+            
+        
+
+        marker_507cc69a60c3e801ae7dfd8e0a4e0dab.bindPopup(popup_89abd09949781d9265b76a8b59cd7eea)
+        ;
+
+        
+    
+    
+            marker_507cc69a60c3e801ae7dfd8e0a4e0dab.bindTooltip(
+                `<div>
+                     Café Forum der Apostelkirche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_507cc69a60c3e801ae7dfd8e0a4e0dab.setIcon(icon_b8e0b57e17d7de5ed58f29da15068929);
+            
+    
+            var marker_7eaad4fe7c7966a637b6e963bc7bf46d = L.marker(
+                [51.45058814946153, 6.9822411822437],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_de01b8bb1aab4f14402ce8e23613b6f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12693bbca172ebc7ea5e0b27e899a77d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6eedca516005ddaed835e6578c5409c3 = $(`<div id="html_6eedca516005ddaed835e6578c5409c3" style="width: 100.0%; height: 100.0%;">     <b>Café Mundgerecht</b><br>         <br>     <a href="https://cafemundgerecht.de/" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_12693bbca172ebc7ea5e0b27e899a77d.setContent(html_6eedca516005ddaed835e6578c5409c3);
+            
+        
+
+        marker_7eaad4fe7c7966a637b6e963bc7bf46d.bindPopup(popup_12693bbca172ebc7ea5e0b27e899a77d)
+        ;
+
+        
+    
+    
+            marker_7eaad4fe7c7966a637b6e963bc7bf46d.bindTooltip(
+                `<div>
+                     Café Mundgerecht
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7eaad4fe7c7966a637b6e963bc7bf46d.setIcon(icon_de01b8bb1aab4f14402ce8e23613b6f8);
+            
+    
+            var marker_83583d1255d2a987b6a78bfd0c56d457 = L.marker(
+                [51.45594617386988, 7.013678188191217],
+                {
+}
+            ).addTo(map_82f694da0284d274ca2271ff04556e29);
+        
+    
+            var icon_e15e70e891aebb88bcb3587b4c2f33ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_264e02af2d8f96b968bbefbce20fe472 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_07a3eebcdfbe59fc1858d819bfa787a4 = $(`<div id="html_07a3eebcdfbe59fc1858d819bfa787a4" style="width: 100.0%; height: 100.0%;">     <b>Transition Town Essen</b><br>         <br>     <a href="https://transitiontown-essen.de/" target="_blank">Zur Webseite</a>     </div>`)[0];
+                popup_264e02af2d8f96b968bbefbce20fe472.setContent(html_07a3eebcdfbe59fc1858d819bfa787a4);
+            
+        
+
+        marker_83583d1255d2a987b6a78bfd0c56d457.bindPopup(popup_264e02af2d8f96b968bbefbce20fe472)
+        ;
+
+        
+    
+    
+            marker_83583d1255d2a987b6a78bfd0c56d457.bindTooltip(
+                `<div>
+                     Transition Town Essen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_83583d1255d2a987b6a78bfd0c56d457.setIcon(icon_e15e70e891aebb88bcb3587b4c2f33ba);
+            
+</script>
+</html>
