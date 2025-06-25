@@ -1,89 +1,110 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HNBK</title>
-  
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="HNBK_logo_Schatten.png" />
-  
-    <!-- Google Fonts & Material Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-    <!-- Materialize CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <script type="text/javascript" src="darkmode.js" defer></script>
-  </head>
-  
-  <body>
-    
-    
-    
-    
-    <!-- Hamburger-Menü -->
-    <nav>
-      <input type="checkbox" id="sidebar-active">
-      <button id="theme-switch" class="btn-theme-switch">
-        <svg class="moon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-        <svg class="sun" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-      </button>
-      <label for="sidebar-active" class="open-sidebar-button">
-        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-      </label>
-      
-      <label id="overlay" for="sidebar-active"></label>
-      <div class="links-container">
-        <label for="sidebar-active" class="close-sidebar-button">
-          <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-        </label>
-  
-        <a class="home-link" href="index.html">Startseite</a> 
-        <a href="#ueber" onclick="scrollToSection('ueber')">Über uns</a> 
-        <a href="#kontakt" onclick="scrollToSection('kontakt')">Kontakt</a>
-      </div>
-    </nav>
+import folium
 
+# Zentrum der Karte: Essen-Frohnhausen
+frohnhausen_coords = [51.44920345761231, 6.980362111327998]
 
+# Erstelle die Karte
+map_frohnhausen = folium.Map(location=frohnhausen_coords, zoom_start=16)
 
-    <div class="menu-overlay" id="menu">
-      <button class="close-button" onclick="toggleMenu()"><span class="material-icons">close</span></button>
-      <a href="#startseite" onclick="scrollToSection('startseite')">Startseite</a>
-      <a href="#ueber" onclick="scrollToSection('ueber')">Über Uns</a>
-      <a href="#kontakt" onclick="scrollToSection('kontakt')">Kontakt</a>
-    </div>
+# Orte definieren – einfach erweiterbar!
+orte = [
+    {
+        "name": "HNBK Berufskolleg",
+        "coords": [51.45304, 6.9802],
+        "beschreibung": "Berufskolleg des HNBK in Frohnhausen",
+        "url": "https://hnbk.de"
+    },
+    {
+        "name": "Bioladen Frohnhausen",
+        "coords": [51.44670060010371, 6.97690142157827],
+        "beschreibung": "Kleiner Bioladen mit regionalen und frischen Produkten.     ",
+        "url": "https://www.startnext.com/bioladenretterfrohnhausen"
+    },
+    {
+        "name": "Gemeinschaftsgarten „Buntes Grün“ des Mehrgenerationenhauses ",
+        "coords": [51.45333787157612, 6.984234112924383],
+        "beschreibung": "Interkultureller Gemeinschaftsgarten am Mehrgenerationenhaus Essen-West.   ",
+        "url": "https://mgh-essen.de/"
+    },
+    {
+        "name": "Veganes Restaurant Hummelbude",
+        "coords": [51.449818596169685, 6.9771801822436865],
+        "beschreibung": "Beliebtes veganes Restaurant mit abwechslungsreichem Mittagstisch.    ",
+        "url": "https://www.hummelbude.com"
+    },
+    {
+        "name": "Kaffeerösterei und Café Arcangelo",
+        "coords": [51.44695109778423, 6.976376897583824],
+        "beschreibung": " Café und Rösterei für handwerklich gerösteten Kaffee.   ",
+        "url": "http://www.arcangelo-kaffee.de/"
+    },
+    {
+        "name": "Nachbarschaftsgärten Diergardtstraße",
+        "coords": [51.452634002108645, 6.986805912924353],
+        "beschreibung": "Gemeinschaftlicher Garten für Nachbarn in Frohnhausen.    ",
+        "url": "https://transitiontown-essen.de/gruppen/gemeinschaftsgaerten/frohnhausen/"
+    },
+    {
+        "name": "Diakonieladen Frohnhausen",
+        "coords": [51.44992702692617, 6.976800182243684],
+        "beschreibung": "Sozialer Laden mit Secondhand-Waren und Hilfsangeboten.    ",
+        "url": "https://www.diakoniewerk-essen.de/Arbeitsprojekte/Diakonielaeden/104-Diakonieladen+Frohnhausen"
+    },
+    {
+        "name": "Kolpingfamilie Frohnhausen",
+        "coords": [51.44967635533788, 6.9766597245734925],
+        "beschreibung": "Katholische Gemeinschaft mit sozialen und kulturellen Aktivitäten.    ",
+        "url": "https://vor-ort.kolping.de/kolpingsfamilie-essen-frohnhausen/"
+    },
+    {
+        "name": "Biohof Felchner (Wochenmarkt)",
+        "coords": [51.44747811889998, 6.978146942106391],
+        "beschreibung": "Regionaler Biohof auf dem Frohnhauser Wochenmarkt.    ",
+        "url": "https://biohof-felchner.de/unser-hofladen"
+    },
+        {
+        "name": "Apostelkirche Essen",
+        "coords": [51.44596442471481, 6.974397499429239],
+        "beschreibung": "Kirche mit sozialem Apostelladen und Gemeindecafé.    ",
+        "url": "https://ekef.de/gemeinde-frohnhausen-apostelkirche.html"
+    },
+    {
+        "name": "Café Forum der Apostelkirche",
+        "coords": [51.446104914474176, 6.97462025340841],
+        "beschreibung": "Gemütliches Café in der Apostelkirche mit vielfältigen Angeboten.    ",
+        "url": "https://ekef.de/angebote-gruppen-frohnhausen.html"
+    },
+    {
+        "name": "Café Mundgerecht",
+        "coords": [51.45058814946153, 6.9822411822437],
+        "beschreibung": "Kleines Café hinter der Alfred-Krupp-Schule.    ",
+        "url": "https://cafemundgerecht.de/"
+    },
+    {
+        "name": "Transition Town Essen",
+        "coords": [51.45594617386988, 7.013678188191217],
+        "beschreibung": "Initiative für nachhaltige Stadtentwicklung und Umweltprojekte.    ",
+        "url": "https://transitiontown-essen.de/"
+    }
+]
     
-    
-    
-    
-    <!-- Startseite -->
-    <section class="startseite section scrollspy" id="content">
-      <div class="container startseite-container">
-    
-        <div class="startseite-text">
-          <h2>Global denken <br>lokal handeln</h2>
-        </div>
-	<p>Wir erkunden unser Quartier, führen Interviews und stellen Beispiele für Initiativen, Geschäfte, Restaurants vor, die sich dem Klimaschutz und der Nachhaltigkeit verschrieben haben. Als Produkt erstellen wir eine interaktive karte des statteils.</p>
-    
-      </div>
-    </section>
-    <div class="container" style="margin-top: 2rem;">
-  <h4>Interaktive Karte</h4>
-  <iframe src="frohnhausen_karte.html" width="100%" height="600" style="border:none;"></iframe>
-</div>
 
-    <!-- Kontakt -->
-    <section class="kontakt section scrollspy" id="kontakt">
-  <div class="container">
-    <h3>Kontakt</h3>
-      <p>Wenn sie fragen haben dann können sie uns per:<br></p>
-      <a href="tel:+49 (0)201 7606 0" class="kontaktstyle"><span class="material-icons icon">call</span>Tel.: +49 (0)201 7606 0<br></a>
-      <a href="mailto:info@hnbk.de" class="kontaktstyle"><span class="material-icons icon">mail</span> E-mail: info@hnbk.de</a>
-  </div>
-</section>
-  </body>
-</html>
+# Marker hinzufügen
+for ort in orte:
+    tooltip_text = f"{ort['name']}"
+    popup_html = f"""
+    <b>{ort['name']}</b><br>
+    {ort['beschreibung']}<br>
+    <a href="{ort['url']}" target="_blank">Zur Webseite</a>
+    """
+    folium.Marker(
+        location=ort["coords"],
+        tooltip=tooltip_text,
+        popup=folium.Popup(popup_html, max_width=250),
+        icon=folium.Icon(color="blue", icon="info-sign")
+    ).add_to(map_frohnhausen)
 
+# Karte speichern
+map_frohnhausen.save("frohnhausen_karte.html")
+
+print("Karte wurde erstellt: 'frohnhausen_karte.html'")
