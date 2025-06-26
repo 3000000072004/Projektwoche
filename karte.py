@@ -101,7 +101,7 @@ for ort in orte:
         location=ort["coords"],
         tooltip=tooltip_text,
         popup=folium.Popup(popup_html, max_width=250),
-        icon=folium.Icon(color="blue", icon="info-sign")
+        icon=folium.Icon(color="green", icon="info-sign")
     ).add_to(map_frohnhausen)
 
 # Karte speichern
